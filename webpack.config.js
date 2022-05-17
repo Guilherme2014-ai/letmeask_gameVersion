@@ -1,9 +1,12 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
 const path = require("path");
+const { config } = require("dotenv");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const miniCssExtractPlugin = require("mini-css-extract-plugin");
 const { DefinePlugin } = require("webpack");
 const resolve = path.resolve;
+
+config({ path: resolve(__dirname, ".env.local") });
 
 module.exports = {
   entry: resolve(__dirname, "src", "index.tsx"),
@@ -57,8 +60,9 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: resolve(__dirname, "public", "index.html"),
     }),
+    // Definindo arquivo .env
     new DefinePlugin({
-      process: { env: {} },
+      "process.env": JSON.stringify(process.env),
     }),
   ],
 };
