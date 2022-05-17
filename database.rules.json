@@ -1,0 +1,18 @@
+{
+  "rules": {
+    "rooms":{
+      ".read": "auth != null",
+      ".write": false,
+        
+      "$eachRoom": {
+        ".read": true,
+        ".write": "auth != null && (!data.exists() || auth.uid == data.child('authorID').val())",
+        
+        "questions": {
+          ".read": true,
+          ".write": "auth != null && (!data.exists() || auth.uid == data.parent().child('authorID').val())",
+        }
+      }
+    }
+  }
+}

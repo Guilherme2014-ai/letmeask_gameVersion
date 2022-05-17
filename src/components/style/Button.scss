@@ -1,0 +1,19 @@
+.button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transition: all ease 0.5s;
+
+    border-radius: 8px;
+    
+    font-weight: 500;
+
+    img {
+        margin-right: 10px;
+    }
+
+    &:hover {
+        filter: brightness(0.9);
+    }
+}

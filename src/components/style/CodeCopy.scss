@@ -1,0 +1,39 @@
+.codeCopy {
+    height: 40px;
+    border-radius: 8px;
+    overflow: hidden;
+
+    background-color: #FFF;
+    border: 1px solid #835afd;
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+
+    div {
+        background-color: #835afd;
+        height: 100%;
+        padding: 0 10px;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        img {
+            width: 20px;
+            height: 20px;
+        }
+    }
+
+    span {
+        padding: 0 16px 0 12px;
+
+        width: 160px;
+
+        white-space: nowrap;
+
+        font-size: 14px;
+        font-weight: 500;
+        
+    }
+}

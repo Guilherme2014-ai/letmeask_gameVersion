@@ -1,0 +1,110 @@
+section {
+    nav {
+        position: fixed;
+        right: 0;
+        left: 0;
+        top: 0;
+        bottom: 0;
+
+        display: flex;
+        justify-content: space-around;
+
+        padding: 10px 0;
+        align-items: center;
+
+        height: fit-content;
+        border-bottom: 0.5px solid rgb(170, 170, 170);
+        background-color: #e9e9e9;
+
+        img {
+            height: 50px;
+        }
+
+        .roomActions {
+            display: flex;
+            gap: 10px;
+
+            button {
+                height: 40px;
+            }
+        }
+    }
+
+    .mainRoom {
+        margin-top: 100px;
+
+        > div {
+            margin: 0 auto;
+
+            width: 100%;
+            max-width: 800px;
+
+            .mainRoom__containerTitle {
+                display: flex;
+                align-items: center;
+    
+                justify-content: space-between;
+    
+                width: 260px;
+    
+                h2 {
+                    font: 800 20px "Poppins", sans-serif;
+                }
+                span {
+                    font: 500 14px "Roboto", sans-serif;
+
+                    color: white;
+                    background-color: #E559F9;
+                    
+                    padding: 8px;
+                    border-radius: 999px;
+                }
+            }
+            .mainRoom__container__questionTextArea {
+                margin-top: 25px;
+
+                textarea {
+                    width: 100%;
+                    padding: 10px;
+
+                    outline: none;
+
+                    border: none;
+                    border-radius: 12px;
+                }
+                .mainRoom__container__questionTextArea__ButtonArea__userInfo {
+                    display: flex;
+                    align-items: center;
+
+                    span {
+                        margin-left: 10px;
+                    }
+                }
+                span {
+                    font: 700 15px "Roboto", sans-serif;
+
+                    color: #737380;
+
+                    b {
+                        color: #835AFD;
+                        cursor: pointer;
+                    }
+                }
+                .mainRoom__container__questionTextArea__ButtonArea {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                }
+            }
+        }
+
+        .mainRoom__container__questions {
+            margin-top: 40px;
+        }
+
+        .mainRoom__container__noQuestionImageArea {
+            display: flex;
+            justify-content: center;
+        }
+    }
+}
