@@ -39,7 +39,10 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "build:webpack": "node --trace-deprecation node_modules/webpack/bin/webpack.js"
+    "build:webpack": "node --trace-deprecation node_modules/webpack/bin/webpack.js",
+
+    "predeploy": "yarn run build:webpack",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
@@ -84,6 +87,7 @@
     "eslint-plugin-react": "7.28.0",
     "eslint-plugin-react-hooks": "4.3.0",
     "file-loader": "^6.2.0",
+    "gh-pages": "^4.0.0",
     "html-loader": "^3.1.0",
     "node-sass": "^7.0.1",
     "prettier": "^2.6.2",
