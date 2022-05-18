@@ -13,6 +13,8 @@ const envData = {
   appId: process.env.REACT_APP_APP_ID,
 };
 
+console.log(`Secret: ${process.env.REACT_APP_API_KEY} - libs()`);
+
 const firebaseConfig = envData;
 
 // Initialize Firebase

@@ -20,6 +20,13 @@ jobs:
         # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
 
     steps:
+    - name: Hello world
+      run: echo Hello world $FIRST_NAME $middle_name $Last_Name!
+      run: echo SecretKey - ${{ secrets.API_KEY }}
+      env:
+        REACT_APP_API_KEY: ${{ secrets.API_KEY }}
+
+    steps:
     - uses: actions/checkout@v2
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v2
