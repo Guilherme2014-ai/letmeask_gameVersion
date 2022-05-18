@@ -23,13 +23,12 @@ jobs:
     - name: Use Node.js ${{ matrix.node-version }}
 
     - uses: actions/checkout@v2
-      - uses: actions/cache@v2
+      - uses: borales/actions-yarn@v2.3.0
         with:
-          path: '**/node_modules'
-          key: ${{ runner.os }}-modules-${{ hashFiles('**/yarn.lock') }}
-
-    - run: yarn ci
-    - run: yarn build:webpack
+          cmd: install # will run `yarn install` command
+      - uses: borales/actions-yarn@v2.3.0
+        with:
+          cmd: build:webpack # will run `yarn build` command
 
 
     - name: Deploy 🚀
@@ -37,4 +36,5 @@ jobs:
       with:
         branch: gh-pages # The branch the action should deploy to.
         folder: build # The folder the action should deploy.
+
         
