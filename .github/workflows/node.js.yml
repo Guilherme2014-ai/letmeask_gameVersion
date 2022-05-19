@@ -27,11 +27,8 @@ jobs:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
 
-    - run: echo Hello world $FIRST_NAME $middle_name $Last_Name!
-    - run: echo SecretKey - ${{ secrets.API_KEY }}
     env:
       REACT_APP_API_KEY: ${{ secrets.API_KEY }}
-
     - run: npm install
     - run: npm ci
     - run: npm run build:webpack
