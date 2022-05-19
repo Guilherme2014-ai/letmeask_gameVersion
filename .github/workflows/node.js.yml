@@ -10,8 +10,6 @@ on:
     branches: [ master ]
 
 jobs:
-  env:
-    REACT_APP_API_KEY: ${{ secrets.API_KEY }}
   build:
 
     runs-on: ubuntu-latest
@@ -32,6 +30,8 @@ jobs:
     - run: npm install
     - run: npm ci
     - run: npm run build:webpack
+    env:
+    REACT_APP_API_KEY: ${{ secrets.API_KEY }}
 
     - name: Deploy 🚀
       uses: JamesIves/github-pages-deploy-action@v4.2.3
