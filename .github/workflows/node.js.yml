@@ -27,8 +27,6 @@ jobs:
         cache: 'npm'
 
     - run: npm install
-    env:
-      REACT_APP_API_KEY: ${{ secrets.API_KEY }}
     - run: npm ci
     - run: npm run build:webpack
 
