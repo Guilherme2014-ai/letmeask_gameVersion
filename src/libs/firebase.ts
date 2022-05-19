@@ -5,15 +5,13 @@ import { getDatabase } from "firebase/database";
 
 // Your web app's Firebase configuration
 const envData = {
-  apiKey: process.env.REACT_APP_API_KEY,
-  authDomain: process.env.REACT_APP_AUTHDOMAIN,
-  projectId: process.env.REACT_APP_PROJECT_ID,
-  storageBucket: process.env.REACT_APP_STORAGE_BUCKET,
-  messagingSenderId: process.env.REACT_APP_MESSAGING_SENDER_ID,
-  appId: process.env.REACT_APP_APP_ID,
+  apiKey: "AIzaSyBXkse2VupCATNEkzSaigRYWHsklFZz_A4",
+  authDomain: "letmeask-f5b3c.firebaseapp.com",
+  projectId: "letmeask-f5b3c",
+  storageBucket: "letmeask-f5b3c.appspot.com",
+  messagingSenderId: "1023281800946",
+  appId: "1:1023281800946:web:c0ca6e91a0baf3626a526b",
 };
-
-console.log(`Secret: ${process.env.REACT_APP_API_KEY} - libs`);
 
 const firebaseConfig = envData;
 
