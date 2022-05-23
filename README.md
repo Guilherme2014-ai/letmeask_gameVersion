@@ -17,3 +17,9 @@ with the tools present
 Firebase <br>
 Realtime Database <br>
 React - Typescript <br>
+
+## Pages
+<div align="center">
+   <img src="https://cdn.discordapp.com/attachments/857701858655076402/978314349682769960/unknown.png" />
+   <img src="https://cdn.discordapp.com/attachments/857701858655076402/978314387037257768/unknown.png" />
+</div>
