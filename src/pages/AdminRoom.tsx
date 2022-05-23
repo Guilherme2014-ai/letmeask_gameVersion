@@ -25,6 +25,7 @@ import { IQuestionQuery } from "../interfaces/IQuestion";
 
 // CSS
 import "./styles/Room.scss";
+import { LetmeaskLinkLogoComponent } from "../components/LetmeaskLinkLogoComponent";
 
 export function AdminRoom() {
   const { id: roomId } = useParams<roomParams>();
@@ -77,14 +78,14 @@ export function AdminRoom() {
     <section>
       <nav>
         <div>
-          <img src={logoImage} alt="icon" />
+          <LetmeaskLinkLogoComponent />
         </div>
         <div>
           <div className="roomActions">
             <CodeCopyComponent code={roomId as string} />
             <Button
-              backgroundColor="#835AFD"
-              color="#835AFD"
+              backgroundColor="chartreuse"
+              color="chartreuse"
               events={{
                 onClick: async () => await closeRoomHanldler(),
               }}

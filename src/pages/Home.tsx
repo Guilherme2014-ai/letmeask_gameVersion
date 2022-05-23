@@ -104,7 +104,7 @@ export function Home() {
               events={{
                 onClick: (e) => joinRoomHandler(e),
               }}
-              backgroundColor="#835AFD"
+              backgroundColor="chartreuse"
             >
               Entrar na Sala
             </Button>

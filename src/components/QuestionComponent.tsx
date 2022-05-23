@@ -90,7 +90,9 @@ export function QuestionComponent({
                 className="questionArea__likeArea__logo"
                 onClick={likeClickEventFunc}
                 style={{
-                  backgroundColor: likedByCurrentUser ? "#835AFD" : "#737380",
+                  backgroundColor: likedByCurrentUser
+                    ? "chartreuse"
+                    : "#737380",
                   WebkitMask: `url(${likeSVG})`,
                   mask: `url(${likeSVG}) no-repeat center`,
                   width: "24px",

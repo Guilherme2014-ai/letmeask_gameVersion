@@ -5,6 +5,9 @@ import { Link, useNavigate } from "react-router-dom";
 // Modules
 import { Room } from "../modules/Room";
 
+// Interfaces
+import { IRoom } from "../interfaces/IRoomInsert";
+
 // Context
 import { GetAuthContext } from "../context/AuthContext";
 
@@ -17,7 +20,6 @@ import logoImage from "../assets/images/logo.svg";
 
 // CSS
 import "./styles/pageAuth.scss";
-import { IRoom } from "../interfaces/IRoomInsert";
 
 export function NewRoom() {
   const navigate = useNavigate();
@@ -50,7 +52,7 @@ export function NewRoom() {
       const createdRoom = await room.Create(roomData);
 
       const roomId = createdRoom.key;
-      navigate(`/room/${roomId}`);
+      navigate(`/room/admin/${roomId}`);
     } catch (e) {
       console.error(e);
     }
@@ -74,7 +76,7 @@ export function NewRoom() {
               onChange={(e) => createRoomInputHandler(e)}
             />
             <Button
-              backgroundColor="#835AFD"
+              backgroundColor="chartreuse"
               events={{
                 onClick: async (event) => await createNewRoomHandler(event),
               }}

@@ -2,8 +2,8 @@
 // Dependencies
 import React, { ChangeEvent, Dispatch } from "react";
 import { useParams } from "react-router-dom";
+
 // Assets
-import logoImage from "../assets/images/logo.svg";
 import emptyQuestions from "../assets/images/empty-questions.svg";
 
 // Hooks
@@ -14,6 +14,7 @@ import Avatar from "@mui/material/Avatar";
 import { Button } from "../components/Button";
 import { QuestionComponent } from "../components/QuestionComponent";
 import { CodeCopyComponent } from "../components/CodeCopyComponent";
+import { LetmeaskLinkLogoComponent } from "../components/LetmeaskLinkLogoComponent";
 
 // interfaces
 type roomParams = { id: string };
@@ -21,6 +22,7 @@ import { IQuestionQuery } from "../interfaces/IQuestion";
 
 // CSS
 import "./styles/Room.scss";
+import { Link } from "react-router-dom";
 
 export function Room() {
   const { id: roomId } = useParams<roomParams>();
@@ -50,9 +52,7 @@ export function Room() {
   return (
     <section>
       <nav>
-        <div>
-          <img src={logoImage} alt="icon" />
-        </div>
+        <LetmeaskLinkLogoComponent />
         <div>
           <div>
             <CodeCopyComponent code={roomId as string} />
@@ -101,7 +101,7 @@ export function Room() {
 
                 <Button
                   color="white"
-                  backgroundColor="#835AFD"
+                  backgroundColor="chartreuse"
                   events={{
                     onClick: sendQuestionHandler,
                   }}
